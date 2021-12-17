@@ -1,7 +1,7 @@
 import os
 import random
 import traceback
-
+import matplotlib.pyplot as plt
 import numpy as np
 
 from tqdm import tqdm
@@ -86,3 +86,10 @@ def prng(decimals=4):
     ou = str(ou)[:decimals + 2]
 
     return float(ou)
+
+def plot(A: np.ndarray):
+    fig = plt.figure()
+    fig.patch.set_facecolor('xkcd:navy')
+
+    plt.imshow(A, interpolation='nearest', cmap='magma')
+    plt.show()
