@@ -4,7 +4,7 @@ import time
 from copy import copy, deepcopy
 from typing import Set
 
-import numpy as np
+import cupy as np
 import torch
 from aocd.models import Puzzle
 from tqdm import tqdm
@@ -265,7 +265,7 @@ except FileNotFoundError:
 
     size = np.max(dmatrix)
 
-    puzzle.answer_b = np.max(dmatrix)
+    # puzzle.answer_b = np.max(dmatrix)
     # pyout(np.max(dmatrix))
 
     # pyout()
